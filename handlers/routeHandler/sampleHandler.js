@@ -9,10 +9,14 @@ Date: 8/8/2022
 
 //  Module Scuffolding
 
-const sampleHandler = {};
+const handler = {};
 
-sampleHandler.handle = () => {
-    console.log('Sample');
+handler.sampleHandler = (requestProperties, callback) => {
+    console.log(requestProperties);
+
+    callback(200, {
+        message: 'This is a sample url',
+    });
 };
 
-module.exports = sampleHandler;
+module.exports = handler;
